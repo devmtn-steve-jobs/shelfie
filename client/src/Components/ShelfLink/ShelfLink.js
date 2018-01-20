@@ -6,8 +6,8 @@ class ShelfLink extends Component {
     render() {
         return (
             <div className='shelfContainer'>
-                <Link id={props.shelfID} to={`/binlist/${props.shelfID}`}> 
-                <h2>{`Shelf ${props.shelfID}`}</h2>
+                <Link id={this.props.shelfID} to={`/binlist/${this.props.shelfID}`}> 
+                <h2>{`Shelf ${this.props.shelfID}`}</h2>
                 </Link>
             </div>
         );
