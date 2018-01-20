@@ -1,3 +1,3 @@
 UPDATE bins
-SET name = $2, price = $3, image_url = $4
-WHERE bin_id = $1;
+SET name = $3, price = $4, image_url = $5
+WHERE bin_id = $1 AND shelf = $2;
