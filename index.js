@@ -6,6 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const massive = require('massive');
 const dbController = require('./dbcontroller');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -13,6 +14,11 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use(express.static(path.resolve(__dirname, "client", "build")));
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 massive(process.env.CONNECTION_STRING).then(dbInstance => app.set('db', dbInstance));
 
