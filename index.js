@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const massive = require('massive');
 const dbController = require('./dbcontroller');
-const path = require('path');
+const path = require('path'); //for hosting
 
 require('dotenv').config();
 
@@ -15,6 +15,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+
+//for hosting
 app.use(express.static(path.resolve(__dirname, "client", "build")));
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
