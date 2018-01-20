@@ -45,6 +45,11 @@
     width: 100px;
     margin: 10px 25px;
     border: none;
+    background-color: #d8d8d8;
+}
+
+a {
+    text-decoration: none; /* no underline */
 }
 
 .save {

@@ -19,7 +19,7 @@ class ViewInventory extends Component {
     }
 
     componentDidMount() {
-        let binID = window.location.href.split("/")[window.location.href.split("/").length-1];
+        let binID = window.location.href.split("/")[window.location.href.split("/").length - 1];
         //let binID = "A1";
         axios.get(`http://localhost:5000/api/bin/${binID}`)
             .then((resp) => {
@@ -115,10 +115,10 @@ class ViewInventory extends Component {
                             this.handleEdit(e)
                         }}
                                 className={this.state.isEditing ? "invButton save" : "invButton"}>{this.state.isEditing ? 'Save' : 'Edit'}</button>
-                        <button onClick={(e) => {
+                        <Link to={window.location.href.split("#")[1].replace(this.state.binID, "")} onClick={(e) => {
                             this.handleDelete(e)
                         }} className="invButton">Delete
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
