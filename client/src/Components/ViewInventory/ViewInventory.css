@@ -1,0 +1,52 @@
+.invContainer {
+    width: 600px;
+    position: absolute;
+    /* display: flex; */
+    float: left;
+    /* justify-content: space-around; */
+    margin: 0 auto;
+    top: 100px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+.leftContainer {
+    float: left;
+}
+
+.rightContainer {
+    float: left;
+    width: 385px;
+    padding-left: 15px;
+}
+
+.rightContainer input {
+    width: 100%;
+    height: 2em;
+}
+
+.rightContainer h5 {
+
+}
+
+.thumb {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-image: url(https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg);
+}
+
+.invButton {
+    height: 50px;
+    width: 100px;
+    margin: 10px 25px;
+    border: none;
+}
+
+.save {
+    background: #40f99b;
+}
