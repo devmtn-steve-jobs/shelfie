@@ -1,1 +1,1 @@
-INSERT INTO bins ( shelf, name, price, image_url ) VALUES ( $1, $2, $3, $4, $5 );
+INSERT INTO bins ( bin_id, shelf, name, price, image_url ) VALUES ( $1, $2, $3, $4, $5 );
