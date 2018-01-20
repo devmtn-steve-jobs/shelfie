@@ -57,7 +57,7 @@ module.exports = {
                     .catch(err => res.status(500).send(err))
             }
             else {
-                res.status(404).send()
+                res.status(404).send("Bin doesnt exist")
             }
         }).catch(err => res.status(500).send(err));
 
@@ -94,6 +94,9 @@ module.exports = {
                 dbInstance.create_bin([bin, shelf, name, price, url]).then(() => {
                     res.status(200).send()
                 }).catch(err => res.status(500).send(err))
+            }
+            else{
+                res.status(404).send("bin already exists")
             }
         })
 
