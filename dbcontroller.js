@@ -51,6 +51,7 @@ module.exports = {
         let dbInstance = req.app.get('db');
         let {id} = req.params; //bin id
         let {name, price, url} = req.body;
+        console.log(name, price, url)
         price = Number(price);
         let shelf = id[0];
         let bin = id[1];
