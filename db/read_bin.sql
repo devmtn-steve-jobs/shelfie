@@ -1,1 +1,1 @@
-SELECT * FROM bins WHERE bin_id = $1;
+SELECT * FROM bins WHERE shelf = $1 AND bin_id = $2;
