@@ -1,0 +1,10 @@
+.shelvesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+shelving {
+margin:10px;
+}
