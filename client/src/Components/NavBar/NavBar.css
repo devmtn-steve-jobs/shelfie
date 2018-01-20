@@ -1,10 +1,19 @@
-.Background {
+.HomeBackground {
     width: 100vw;
-    height: 10vh;
+    height: 100px;
     background-color: #AB2A19 ;
+    display: flex;
 }
 
-img {
-    height: 50px;
-    width: 50px;
+.HomeImage {
+    height: 60px;
+    width: 60px;
+    margin: 15px 15px 0 25vw;
+    /* justify-content: center; */
+}
+
+.HomeTitle {
+    color: white;
+    font-size: 40px;
+    padding: 0 0 0 0;
 }
