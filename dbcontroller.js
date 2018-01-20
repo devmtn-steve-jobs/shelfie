@@ -17,7 +17,19 @@ module.exports = {
         let dbInstance = req.app.get('db');
         let {id} = req.params; //shelf id
         dbInstance.read_bins([id]).then(bins => {
-            res.status(200).send(bins)
+            console.log(bins)
+            let output = [null, null, null, null, null];
+            if (bins.length) {
+                for (var i = 0; i < 5; i++) {
+                    if (bins[i]) {
+                        output[bins[i].bin_id - 1] = bins[i];
+                    }
+                }
+                res.status(200).send(output)
+            }
+            else {
+                res.status(200).send(output)
+            }
         }).catch(err => res.status(500).send(err))
     },
     getBin: (req, res, next) => {
@@ -95,7 +107,7 @@ module.exports = {
                     res.status(200).send()
                 }).catch(err => res.status(500).send(err))
             }
-            else{
+            else {
                 res.status(404).send("bin already exists")
             }
         })
