@@ -1,1 +1,1 @@
-DELETE FROM bins WHERE bin_id = $1;
+DELETE FROM bins WHERE bin_id = $1 AND shelf = $2;
