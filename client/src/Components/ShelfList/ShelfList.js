@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ShelfLink from '../ShelfLink/ShelfLink';
+import './ShelfList.css'
 
 class ShelfList extends Component {
     render() {
